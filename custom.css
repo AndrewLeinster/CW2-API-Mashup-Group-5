@@ -1,0 +1,37 @@
+/*
+Colour Palette:
+#006D77 <- navbar background
+#83C5BE <- navbar text
+#EDF6F9 <- page background
+#FFDDD2 <- card background
+#E29578 <- card text
+*/
+
+/* navBar styling */
+.navbarStyle {
+    background-color: #006D77;
+}
+
+.navbarText {
+    color: #83C5BE;
+}
+
+.activeLink {
+    color: white;
+}
+
+/* background image */
+#bgImage {
+    background-image: url("cityBikes.jpg");
+}
+
+/* card styling */
+.cardStyle {
+    background-color: #FFDDD2;
+    color: #E29578 ;
+}
+
+/* add page background colour */
+body {
+    background-color: #EDF6F9;
+}
