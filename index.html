@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+  <!--Navbar-->
   <nav class="navbar navbar-expand p-3 navbarStyle">
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="#">BikesBikesBikes</a>
@@ -32,92 +32,121 @@
     </div>
   </nav>
 
+  <!--Background image-->
   <div class="container-fluid pt-5 pb-5" id="bgImage">
-    <div class="container p-5 mx-auto bg-light">
-      <div class="row mx-auto">
-        <label for="location" class="form-label">Location:</label>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon3"></span>
-          <input type="text" class="form-control" id="location" aria-describedby="basic-addon3">
+
+      <!--Inputboxes container-->
+      <div class="container p-5 mx-auto bg-light" id="homepagebox">
+        <div class="row mx-auto">
+          <label for="location" class="form-label">Location:</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3"></span>
+            <input type="text" class="form-control" id="location" aria-describedby="basic-addon3">
+          </div>
+
+        </div>
+        <div class="row mx-auto">
+          <label for="dateTime" class="form-label">Date/Time:</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3"></span>
+            <input type="text" class="form-control" id="dateTime" aria-describedby="basic-addon3">
+          </div>
+        </div>
+        <div class="row mx-auto">
+          <div class="col-4">
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
         </div>
 
       </div>
-      <div class="row mx-auto">
-        <label for="dateTime" class="form-label">Date/Time:</label>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon3"></span>
-          <input type="text" class="form-control" id="dateTime" aria-describedby="basic-addon3">
-        </div>
-      </div>
-      <div class="row mx-auto">
-        <div class="col-4">
-          <button type="button" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-
-    </div>
+ 
   </div>
+
+  <!--------------->
+  <!--Is there a more elegant way to solve this spacing issue?-->
+  <!--Without these breaks, the input container box overlaps the text beneath since it's been shifted down-->
+  <!--------------->
+  <br>  <br>  <br>  <br>  <br>  <br>  
+
+
+  <!--Homepage text-->
   <div class="container mx-auto p-3 mb-5 bg-light">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat impedit quidem nam recusandae fugiat eius
       repellat quibusdam? Vel, minus explicabo hic porro nesciunt enim dolores magnam placeat alias ab iusto.</p>
   </div>
-  
+
+
+  <!--Cards-->
   <!--Containers and images can be added with javascript upon user submitting input. As well as this more info button linking to moreInfo.html page can be appended-->
-  
-  <div class="container">
+  <div class="container" id="containerbox">
     <div class="row">
-      <div class="card mb-3 cardStyle">
-        <div class="row g-0">
+      <div class="card cardStyle">
+        <div class="row ">
+
           <div class="col-md-4">
             <img src="..." class="img-fluid rounded-start" alt="...">
           </div>
+
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Manchester</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                 content. This content is a little bit longer.</p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
+
     <div class="row">
-      <div class="card mb-3 cardStyle">
-        <div class="row g-0">
+      <div class="card cardStyle">
+        <div class="row">
+
           <div class="col-md-4">
             <img src="..." class="img-fluid rounded-start" alt="...">
           </div>
+
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">London</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                 content. This content is a little bit longer.</p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
            </div>
           </div>
+
         </div>
 
       </div>
     </div>
+
     <div class="row">
-      <div class="card mb-3 cardStyle">
-        <div class="row g-0">
+      <div class="card cardStyle">
+        <div class="row">
+
           <div class="col-md-4">
             <img src="..." class="img-fluid rounded-start" alt="...">
           </div>
+
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Edinburgh</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                 content. This content is a little bit longer.</p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </div>
+
+
+
+  <!--Footer-->
   <div class="container-fluid bg-light text-center p-2 mt-5">
     <footer>
       <ul class="list-unstyled">
