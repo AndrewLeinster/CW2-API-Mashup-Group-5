@@ -7,6 +7,26 @@ Colour Palette:
 #E29578 <- card text
 */
 
+/* add background colour */
+body {
+    background-color: #EDF6F9;
+}
+
+/* add text colour to p tags */
+p {
+    color: #006D77;
+}
+
+/* add text colour to labels */
+label {
+    color: #006D77;
+}
+
+/* add text colour to headings */
+h1 {
+    color: #006D77;
+}
+
 /* navBar styling */
 .navbarStyle {
     background-color: #006D77;
@@ -28,10 +48,6 @@ Colour Palette:
 /* card styling */
 .cardStyle {
     background-color: #FFDDD2;
-    color: #E29578 ;
+    color: #E29578;
 }
 
-/* add page background colour */
-body {
-    background-color: #EDF6F9;
-}

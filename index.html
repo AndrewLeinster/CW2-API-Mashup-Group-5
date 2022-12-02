@@ -9,7 +9,7 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="custom.css" rel="stylesheet">
-  
+
   <title>Home</title>
 </head>
 
@@ -20,25 +20,28 @@
       <a class="navbar-brand text-white" href="#">BikesBikesBikes</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link  navbarText activeLink" aria-current="page" href="#">Home</a>
+          <a class="nav-link  navbarText activeLink" aria-current="page" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbarText" href="#">page2</a>
+          <a class="nav-link navbarText" href="moreInfo.html">More Info</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbarText" href="#">Page3</a>
+          <a class="nav-link navbarText" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbarText" href="duckPage.html">Ducks</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid pt-5 pb-5" id="bgImage">
-    <div class="container p-5 mx-auto bg-light">
+    <div class="container p-5 mx-auto bg-light rounded">
       <div class="row mx-auto">
         <label for="location" class="form-label">Location:</label>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon3"></span>
-          <input type="text" class="form-control" id="location" aria-describedby="basic-addon3">
+          <input type="text" class="form-control" placeholder="Location" id="location" aria-describedby="basic-addon3">
         </div>
 
       </div>
@@ -46,7 +49,7 @@
         <label for="dateTime" class="form-label">Date/Time:</label>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon3"></span>
-          <input type="text" class="form-control" id="dateTime" aria-describedby="basic-addon3">
+          <input type="datetime-local" class="form-control" id="dateTime" aria-describedby="basic-addon3">
         </div>
       </div>
       <div class="row mx-auto">
@@ -61,9 +64,9 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat impedit quidem nam recusandae fugiat eius
       repellat quibusdam? Vel, minus explicabo hic porro nesciunt enim dolores magnam placeat alias ab iusto.</p>
   </div>
-  
+
   <!--Containers and images can be added with javascript upon user submitting input. As well as this more info button linking to moreInfo.html page can be appended-->
-  
+
   <div class="container">
     <div class="row">
       <div class="card mb-3 cardStyle">
@@ -74,14 +77,15 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <span class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</span>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="card mb-3 cardStyle">
         <div class="row g-0">
@@ -91,26 +95,27 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <span class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</span>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-           </div>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
+
     <div class="row">
       <div class="card mb-3 cardStyle">
         <div class="row g-0">
           <div class="col-md-4">
             <img src="..." class="img-fluid rounded-start" alt="...">
           </div>
+
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <span class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</span>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
@@ -118,6 +123,7 @@
       </div>
     </div>
   </div>
+
   <div class="container-fluid bg-light text-center p-2 mt-5">
     <footer>
       <ul class="list-unstyled">
