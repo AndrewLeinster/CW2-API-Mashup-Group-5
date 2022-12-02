@@ -45,9 +45,36 @@ h1 {
     background-image: url("cityBikes.jpg");
 }
 
+
+
 /* card styling */
 .cardStyle {
     background-color: #FFDDD2;
-    color: #E29578;
+    color: #E29578 ;
+    border-radius: 40px;
+    margin-top: 15px;
+    
+
 }
 
+/* add page background colour */
+body {
+    background-color: #EDF6F9;
+}
+
+/* moving element on homepage down and adding shadows */ 
+#homepagebox {
+    position:relative;
+    margin-top: 150px;
+    margin-bottom:-150px;
+    border-radius: 40px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.12);
+}
+
+#containerbox {
+    border-radius: 40px;
+    padding:50px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
+}
