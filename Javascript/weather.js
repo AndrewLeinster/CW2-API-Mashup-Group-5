@@ -11,7 +11,10 @@ document.getElementById("submit").addEventListener("click", function () { getDat
 function getData() {
     const weatherContainer = document.getElementById("weather");
     let searchedCity = document.getElementById("location").value;
-    url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + searchedCity + "/2022-12-03/?key=5KP9KEBYVW933PV52J78QTRGX";
+    let date = document.getElementById("dateTime").value;
+    console.log(date)
+    console.log(searchedCity)
+    url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + searchedCity + "/" + date + ":00/?key=5KP9KEBYVW933PV52J78QTRGX&include=current";
     console.log(url)
     console.log(searchedCity)
     fetch(url)
@@ -21,23 +24,50 @@ function getData() {
             console.log(data);
             var weather = data.days;
             console.log(weather)
-            var h1 = createNode("h1");
-            h1.innerHTML = "City: " + data.address;
             return weather.map(function (wether) {
-                var p = createNode("p");
-                var p1 = createNode("p");
-                var p2 = createNode("p");
-                p.innerHTML = "Conditions: " + wether.conditions;
-                p1.innerHTML = "Description: " + wether.description;
-                p2.innerHTML = "Date Time: " + wether.datetime;
+                    var h2 = createNode("h2");
+                    var p = createNode("p");
+                    var p1 = createNode("p");
+                    var p2 = createNode("p");
+                    var p3 = createNode("p");
+                    var a = createNode("a");
+                    var column = createNode("div");
+                    var card = createNode("div");
+                    var cardBody = createNode("div");
 
-                append(weatherContainer, h1);
-                append(weatherContainer, p);
-                append(weatherContainer, p2);
-                append(weatherContainer, p1);
+                    cardBody.classList.add("card-body");
+                    card.classList.add("card");
+                    card.classList.add("mt-3");
+                    column.classList.add("col-4");
+                    h2.classList.add("card-title");
+                    p.classList.add("card-text");
+                    p1.classList.add("card-text");
+                    p2.classList.add("card-text");
+                    p3.classList.add("card-text");
+                    h2.innerHTML = "City: " + data.address;
+                    p.innerHTML = "Conditions: " + wether.conditions;
+                    p1.innerHTML = "Description: " + wether.description;
+                    p2.innerHTML = "Date: " + wether.datetime;
+                    p3.innerHTML = "Time: " + data.currentConditions.datetime;
+                    a.classList.add("btn");
+                    a.classList.add("btn-primary");
+                    a.innerHTML = "More Info"
+                    //will make this link to a more info page later
+                    a.href = "";
+
+                    append(cardBody, h2);
+                    append(cardBody, p);
+                    append(cardBody, p1);
+                    append(cardBody, p2);
+                    append(cardBody, p3);
+                    append(cardBody, a)
+                    append(column, cardBody)
+                    append(weatherContainer, column);
+                })
+
+
+
             })
-
-        })
         .catch(function (error) {
             console.log(error);
         });
