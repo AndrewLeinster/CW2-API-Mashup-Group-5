@@ -98,7 +98,7 @@ body {
 
 .navbar-brand img{
     height: 75px;
-    width: 75px;
+    width: 100%;
 }
 
 .navbar-brand:hover {
