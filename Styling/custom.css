@@ -27,16 +27,6 @@ h1 {
     color: #006D77;
 }
 
-.buttonStyle {
-    background-color: #FFDDD2;
-    color: #E29578;
-}
-
-.btn-primary:hover {
-    background-color: #E29578;
-    color:#FFDDD2;
-}
-
 /* navBar styling */
 .navbarStyle {
     background-color: #006D77;
@@ -52,18 +42,19 @@ h1 {
 
 /* background image */
 #bgImage {
-    background-image: url("Background\ image.jpg");
-    width: 100%;
+    background-image: url("cityBikes.jpg");
 }
 
 
 
 /* card styling */
 .cardStyle {
-    background-color: #83C5BE;
-    color: #006D77 ;
+    background-color: #FFDDD2;
+    color: #E29578 ;
     border-radius: 40px;
     margin-top: 15px;
+    
+
 }
 
 /* add page background colour */
@@ -94,16 +85,20 @@ body {
 }
 
 .nav-item a {
-    font-size: 25pt;
+    font-size: 20pt;
     border-radius: 25px;
     margin-left: 15px;
     padding: 10px;
 }
 
 .navbar-brand{
-    font-size: 25pt;
     border-radius: 25px;
     padding: 10px;
+}
+
+.navbar-brand img{
+    height: 75px;
+    width: 75px;
 }
 
 .navbar-brand:hover {
