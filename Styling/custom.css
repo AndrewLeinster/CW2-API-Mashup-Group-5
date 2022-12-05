@@ -78,3 +78,25 @@ body {
     /* x offset, y offset, blur radius, colour*/
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
 }
+
+.nav-item a:hover {
+    color: white;
+    box-shadow: 5px 5px 10px 5px #005961;
+}
+
+.nav-item a {
+    font-size: 25pt;
+    border-radius: 25px;
+    margin-left: 15px;
+    padding: 10px;
+}
+
+.navbar-brand{
+    font-size: 25pt;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.navbar-brand:hover {
+    box-shadow: 5px 5px 10px 5px #005961;
+}
