@@ -27,6 +27,16 @@ h1 {
     color: #006D77;
 }
 
+.buttonStyle {
+    background-color: #FFDDD2;
+    color: #E29578;
+}
+
+.btn-primary:hover {
+    background-color: #E29578;
+    color:#FFDDD2;
+}
+
 /* navBar styling */
 .navbarStyle {
     background-color: #006D77;
@@ -49,12 +59,10 @@ h1 {
 
 /* card styling */
 .cardStyle {
-    background-color: #FFDDD2;
-    color: #E29578 ;
+    background-color: #83C5BE;
+    color: #006D77 ;
     border-radius: 40px;
     margin-top: 15px;
-    
-
 }
 
 /* add page background colour */
