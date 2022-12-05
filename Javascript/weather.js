@@ -36,15 +36,19 @@ function getData() {
                     var cardBody = createNode("div");
 
                     cardBody.classList.add("card-body");
+                    cardBody.classList.add("p-3")
                     card.classList.add("card");
                     card.classList.add("mt-3");
-                    column.classList.add("col-4");
+                    column.classList.add("cardStyle");
+                    card.classList.add("cardStyle");
+                    column.classList.add("col-md-4");
                     h2.classList.add("card-title");
+                    h2.classList.add("cardStyle");
                     p.classList.add("card-text");
                     p1.classList.add("card-text");
                     p2.classList.add("card-text");
                     p3.classList.add("card-text");
-                    h2.innerHTML = "City: " + data.address;
+                    h2.innerHTML = data.address;
                     p.innerHTML = "Conditions: " + wether.conditions;
                     p1.innerHTML = "Description: " + wether.description;
                     p2.innerHTML = "Date: " + wether.datetime;
@@ -52,9 +56,13 @@ function getData() {
                     a.classList.add("btn");
                     a.classList.add("btn-primary");
                     a.innerHTML = "More Info"
+                    p.classList.add("cardStyle");
+                    p1.classList.add("cardStyle");
+                    p2.classList.add("cardStyle");
+                    p3.classList.add("cardStyle");
                     //will make this link to a more info page later
                     a.href = "";
-
+                    weatherContainer.classList.add("cardStyle")
                     append(cardBody, h2);
                     append(cardBody, p);
                     append(cardBody, p1);
@@ -63,6 +71,7 @@ function getData() {
                     append(cardBody, a)
                     append(column, cardBody)
                     append(weatherContainer, column);
+        
                 })
 
 
