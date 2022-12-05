@@ -61,8 +61,10 @@ function getData() {
                     p2.classList.add("cardStyle");
                     p3.classList.add("cardStyle");
                     //will make this link to a more info page later
-                    a.href = "";
-                    weatherContainer.classList.add("cardStyle")
+                    a.href = "Individual pages/moreInfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
+                    console.log(a.href)
+                    weatherContainer.classList.add("cardStyle");
+    
                     append(cardBody, h2);
                     append(cardBody, p);
                     append(cardBody, p1);
