@@ -8,21 +8,50 @@ function append(parent, el) {
 }
 
 currentLocation = window.location.href;
-console.log(currentLocation);
+//console.log(currentLocation);
 var searchString = currentLocation.split("?");
-var city = searchString[1];
+var city = searchString[1].toLowerCase();
 let date = searchString[2];
 var time = searchString[3];
 
+
+//api to get photos of the city. Doesn't have every city, but better than nothing?
+let cityUrl = "https://api.teleport.org/api/urban_areas/slug:" + city + "/images/"
+//let cityUrl = "https://api.teleport.org/api/urban_areas/slug:glasgow/images/"
+console.log(cityUrl);
+fetch(cityUrl)
+    .then((resp) => resp.json())
+    .then(function (data2) {
+        console.log(data2);
+        var cities = data2.photos;
+        console.log(cities)
+        return cities.map(function(city) {
+            var column = createNode("div");
+            var img = createNode("img");
+            column.classList.add("col-md-6")
+            column.classList.add("mt-5");
+            img.src = city.image.web;
+            append(column, img)
+            append(moreInfoContainer, column);
+        })
+
+
+    })
+
+    .catch(function (error) {
+        console.log(error)
+    });
+
+//get all weather data
 let url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + city + "/" + date + "T" + time + "/?unitGroup=uk&key=5KP9KEBYVW933PV52J78QTRGX&include=current";
-console.log(url);
+//console.log(url);
 const moreInfoContainer = document.getElementById("moreInfo");
 fetch(url)
     .then((resp) => resp.json())
     .then(function (data) {
-        console.log(data);
+        //console.log(data);
         var weather = data.days;
-        console.log(weather)
+        //console.log(weather)
         return weather.map(function (wether) {
             var h1 = createNode("h1");
             var p = createNode("p");
@@ -48,9 +77,7 @@ fetch(url)
             let finalTime = time.split(":");;
             finalTime.pop();
             finalTime = finalTime.toString().replaceAll(",",":")
-            console.log(finalTime);
-
-            column.classList.add("col")
+            column.classList.add("col-md-6")
             column.classList.add("mt-5");
             a.classList.add("btn");
             a.classList.add("buttonStyle");
