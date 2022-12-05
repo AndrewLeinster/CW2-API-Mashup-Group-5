@@ -52,7 +52,8 @@ h1 {
 
 /* background image */
 #bgImage {
-    background-image: url("cityBikes.jpg");
+    background-image: url("Background\ image.jpg");
+    width: 100%;
 }
 
 
