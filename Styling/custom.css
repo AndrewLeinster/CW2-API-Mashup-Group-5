@@ -7,11 +7,6 @@ Colour Palette:
 #E29578 <- card text
 */
 
-/* add background colour */
-body {
-    background-color: #EDF6F9;
-}
-
 /* add text colour to p tags */
 p {
     color: #006D77;
@@ -46,22 +41,19 @@ h1 {
     width: 100%;
 }
 
-
-
 /* card styling */
 .cardStyle {
-    background-color: #FFDDD2;
-    color: #E29578 ;
+    background-color: #83C5BE;
+    color:#006D77 ;
     border-radius: 40px;
     margin-top: 15px;
-    
-
 }
 
 /* add page background colour */
 body {
     background-color: #EDF6F9;
 }
+
 
 /* moving element on homepage down and adding shadows */ 
 #homepagebox {
@@ -93,15 +85,51 @@ body {
 }
 
 .navbar-brand{
-    border-radius: 25px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .navbar-brand img{
-    height: 75px;
+    height: 50px;
     width: 100%;
 }
 
 .navbar-brand:hover {
     box-shadow: 5px 5px 10px 5px #005961;
 }
+
+.mainimg{
+    opacity: 90%;
+    border-radius: 40px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.moreinfobody {
+    background: rgb(0,109,119);
+background: linear-gradient(36deg, rgba(0,109,119,1) 0%, rgba(131,197,190,1) 100%);
+}
+
+.moreinfobox {
+    margin-top:20px;
+    border-radius: 40px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
+    border-radius: 40px;
+    padding: 20px 50px 50px 50px;
+    background-color:#EDF6F9 ;
+}
+
+footer {
+    background-color: #EDF6F9;
+    opacity: 50%;
+    margin-top:20px;
+    border-radius: 40px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
+    border-radius: 40px;
+    padding: 20px 50px 10px 50px;
+    margin: 0px 80px;
+    background-color:#EDF6F9 ;
+}
+

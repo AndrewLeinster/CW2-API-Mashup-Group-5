@@ -19,6 +19,7 @@ var time = searchString[3];
 let cityUrl = "https://api.teleport.org/api/urban_areas/slug:" + city + "/images/"
 //let cityUrl = "https://api.teleport.org/api/urban_areas/slug:glasgow/images/"
 console.log(cityUrl);
+const moreInfobgContainer = document.getElementById("moreInfobg");
 fetch(cityUrl)
     .then((resp) => resp.json())
     .then(function (data2) {
@@ -26,13 +27,13 @@ fetch(cityUrl)
         var cities = data2.photos;
         console.log(cities)
         return cities.map(function(city) {
-            var column = createNode("div");
+            var bgimage = createNode("div");
             var img = createNode("img");
-            column.classList.add("col-md-6")
-            column.classList.add("mt-5");
+            bgimage.classList.add("row");
+            img.classList.add("mainimg");
             img.src = city.image.web;
-            append(column, img)
-            append(moreInfoContainer, column);
+            append(bgimage, img)
+            append(moreInfobgContainer, bgimage);
         })
 
 
@@ -80,6 +81,7 @@ fetch(url)
             column.classList.add("col-md-6")
             column.classList.add("mt-5");
             a.classList.add("btn");
+            a.classList.add("btn-primary");
             a.classList.add("buttonStyle");
             a.classList.add("btn-primary:hover");
             h1.innerHTML = data.resolvedAddress;
