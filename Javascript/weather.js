@@ -77,7 +77,6 @@ function getData() {
                 })
 
 
-
             })
         .catch(function (error) {
             console.log(error);
