@@ -7,6 +7,11 @@ Colour Palette:
 #E29578 <- card text
 */
 
+/* add background colour */
+body {
+    background-color: #EDF6F9;
+}
+
 /* add text colour to p tags */
 p {
     color: #006D77;
@@ -20,6 +25,16 @@ label {
 /* add text colour to headings */
 h1 {
     color: #006D77;
+}
+/* add styling to buttons */
+.buttonStyle {
+    background-color: #FFDDD2;
+    color: #E29578;
+}
+
+.btn-primary:hover {
+    background-color: #E29578;
+    color:#FFDDD2;
 }
 
 /* navBar styling */
@@ -47,11 +62,6 @@ h1 {
     color:#006D77 ;
     border-radius: 40px;
     margin-top: 15px;
-}
-
-/* add page background colour */
-body {
-    background-color: #EDF6F9;
 }
 
 
