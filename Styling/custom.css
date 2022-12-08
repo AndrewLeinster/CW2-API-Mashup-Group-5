@@ -105,7 +105,7 @@ body {
     margin-top: 5px;
 }
 
-.moreinfobody {
+.pagebody {
     background: rgb(0,109,119);
     background: linear-gradient(36deg, rgba(0,109,119,1) 0%, rgba(131,197,190,1) 100%);
 }
