@@ -102,12 +102,12 @@ body {
     opacity: 90%;
     border-radius: 40px;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 .moreinfobody {
     background: rgb(0,109,119);
-background: linear-gradient(36deg, rgba(0,109,119,1) 0%, rgba(131,197,190,1) 100%);
+    background: linear-gradient(36deg, rgba(0,109,119,1) 0%, rgba(131,197,190,1) 100%);
 }
 
 .moreinfobox {
@@ -116,7 +116,7 @@ background: linear-gradient(36deg, rgba(0,109,119,1) 0%, rgba(131,197,190,1) 100
     /* x offset, y offset, blur radius, colour*/
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
     border-radius: 40px;
-    padding: 20px 50px 50px 50px;
+    padding: 15px 50px 50px 50px;
     background-color:#EDF6F9 ;
 }
 
@@ -133,3 +133,9 @@ footer {
     background-color:#EDF6F9 ;
 }
 
+.imagenotavailable {
+text-align: center;
+opacity: 25%;
+font-size: 15px;
+padding-bottom: -15px;
+}
