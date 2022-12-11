@@ -1,0 +1,249 @@
+/* add background colour */
+body {
+    background-color: #202020;
+}
+
+/* add text colour to p tags */
+p {
+    color: #b0b0b0;
+    opacity: 50%;
+}
+
+#inputbox {
+    opacity: 30%;
+}
+
+/* add text colour to labels */
+label {
+    color: #b0b0b0;
+}
+
+/* add text colour to headings */
+h1 {
+    color: #b0b0b0;
+}
+
+/* add styling to buttons */
+.buttonStyle {
+    background-color: #616464;
+    color: #b0b0b0;
+    margin-top: 5px;
+}
+
+.btn-primary:hover {
+    background-color:#232525;
+    color: #E29578;
+}
+
+/* navBar styling */
+.navbarStyle {
+    background-color: #232525;
+}
+
+.navbarText {
+    color: #b0b0b0;
+}
+
+.activeLink {
+    color: white;
+}
+
+/* background image */
+#bgImage {
+    background-image: url("BackgroundDark.jpg");
+    width: 100%;
+    opacity: 100%;
+}
+
+/* card styling */
+.cardStyle {
+    background-color: #232525;
+    border-radius: 40px;
+    margin-top: 15px;
+}
+
+
+/* moving element on homepage down and adding shadows */ 
+#homepagebox {
+    position:relative;
+    margin-top: 150px;
+    margin-bottom:-150px;
+    border-radius: 40px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.12);
+    background-color: #232525;
+}
+
+#containerbox {
+    border-radius: 40px;
+    padding:50px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
+    background-color: #232525;
+}
+
+.nav-item a:hover {
+    color: white;
+    box-shadow: 5px 5px 10px 5px #202020;
+}
+
+.nav-item a {
+    font-size: 20pt;
+    border-radius: 25px;
+    margin-left: 15px;
+    padding: 10px;
+}
+
+.navbar-brand{
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.navbar-brand img{
+    height: 50px;
+    width: 100%;
+}
+
+.mainimg{
+    opacity: 90%;
+    border-radius: 40px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.pagebody {
+    background: rgb(0,109,119);
+    background: linear-gradient(36deg, rgba(0,109,119,1) 0%, rgba(131,197,190,1) 100%);
+}
+
+.moreinfobox {
+    margin-top:20px;
+    border-radius: 40px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
+    border-radius: 40px;
+    padding: 15px 50px 50px 50px;
+    background-color:#EDF6F9 ;
+}
+
+.duckbox {
+    margin-top:20px;
+    border-radius: 40px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
+    border-radius: 40px;
+    padding: 15px 10px 15px 10px;
+    background-color:#EDF6F9 ;
+}
+
+footer {
+    background-color: #232525;
+    opacity: 50%;
+    margin-top:20px;
+    border-radius: 40px;
+    /* x offset, y offset, blur radius, colour*/
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
+    border-radius: 40px;
+    padding: 20px 50px 10px 50px;
+    margin: 0px 80px;
+}
+
+.carouselContainer {
+    border-radius: 40px;
+    padding: 0px;
+    box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
+    background-color:#EDF6F9 ;
+}
+
+.aboutImage {
+    border-radius: 40px;
+}
+
+.aboutContainer {
+    background-color:#EDF6F9 ;
+}
+
+.imagenotavailable {
+text-align: center;
+opacity: 25%;
+font-size: 15px;
+padding-bottom: -15px;
+}
+
+.duckimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 40px;
+}
+
+.homepagetext {
+    opacity: 40%;
+    padding-bottom: 12pt;
+}
+
+
+/*Toggle button */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #000000;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #000000;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
