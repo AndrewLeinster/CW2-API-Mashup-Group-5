@@ -61,9 +61,6 @@ function getData() {
                     a.classList.add("btn");
                     a.classList.add("btn-primary");
                     a.innerHTML = "More Info";
-                    button.classList.add("heartbutton");
-                    input.setAttribute("type", "checkbox");
-                    input.setAttribute("id", "heart");
                     div.classList.add("heart_container");
                     i.classList.add("fa-regular");
                     i.classList.add("fa-heart");
@@ -84,9 +81,7 @@ function getData() {
                     append(cardBody, p3);
                     append(cardBody, a);
                     append(div, i);
-                    append(input, div);
-                    append(button, input);
-                    append(cardBody, button);
+                    append(cardBody, div);
                     append(column, cardBody);
                     append(weatherContainer, column);
         
