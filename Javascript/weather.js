@@ -1,3 +1,4 @@
+window.onload = updateFavouriteList();
 
 function createNode(element) {
     return document.createElement(element);
@@ -31,6 +32,10 @@ function getData() {
                     var p2 = createNode("p");
                     var p3 = createNode("p");
                     var a = createNode("a");
+                    var button = createNode("button");
+                    var input = createNode("input");
+                    var div = createNode("div");
+                    var i = createNode("i");
                     var column = createNode("div");
                     var card = createNode("div");
                     var cardBody = createNode("div");
@@ -55,7 +60,14 @@ function getData() {
                     p3.innerHTML = "Time: " + data.currentConditions.datetime;
                     a.classList.add("btn");
                     a.classList.add("btn-primary");
-                    a.innerHTML = "More Info"
+                    a.innerHTML = "More Info";
+                    button.classList.add("heartbutton");
+                    input.setAttribute("type", "checkbox");
+                    input.setAttribute("id", "heart");
+                    div.classList.add("heart_container");
+                    i.classList.add("fa-regular");
+                    i.classList.add("fa-heart");
+                    i.setAttribute("id","heart");
                     p.classList.add("cardStyle");
                     p1.classList.add("cardStyle");
                     p2.classList.add("cardStyle");
@@ -70,8 +82,12 @@ function getData() {
                     append(cardBody, p1);
                     append(cardBody, p2);
                     append(cardBody, p3);
-                    append(cardBody, a)
-                    append(column, cardBody)
+                    append(cardBody, a);
+                    append(div, i);
+                    append(input, div);
+                    append(button, input);
+                    append(cardBody, button);
+                    append(column, cardBody);
                     append(weatherContainer, column);
         
                 })
@@ -81,4 +97,29 @@ function getData() {
         .catch(function (error) {
             console.log(error);
         });
+}
+
+function updateFavouriteList() {
+    if (localStorage.getItem("favouriteItems") === null) { //  if array doesnt exist make one
+        blankArray = [];
+        localStorage.setItem("favouriteItems", JSON.stringify(blankArray));
+        printNoFavourites();
+    } else if (localStorage.getItem("favouriteItems") === "[]") { //  if array does exist but is empty
+        printNoFavourites();
+    } else {
+        storedList = JSON.parse(localStorage.getItem("favouriteItems")); //get localstorage and turn into array
+        toDoContainer = document.createElement('div'); //go through array and write a new alert box for each
+        storedList.forEach(function (item, index) {
+            div = document.createElement('div');
+            div.setAttribute('class', 'mb-2 col-md-12');
+            div.innerHTML = "<div class='alert alert-primary mb-1' onClick='complete(" + index + ")' id=item-" + index + ")'><p class='mb-0'><i class='far fa-circle mr-4'></i>" + " " + item + "</p></div>";
+            toDoContainer.appendChild(div);
+        });
+        document.getElementById('containerbox').innerHTML = favourites.innerHTML;
+    }
+}
+
+function printNoFavourites() {
+    nofavourites = "<div class='mb-2 col-md-12'><p class='mb-2 mt-2 text-center p-2'><i class='fa-solid fa-star'></i></i> No Saved Favourites</p></div>";
+    document.getElementById('containerbox').innerHTML = nofavourites;
 }
