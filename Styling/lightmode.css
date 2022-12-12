@@ -216,7 +216,7 @@ padding-bottom: -15px;
 	position: relative;
 }
 
-label:after {
+#label:after {
 	content: '';
 	position: absolute;
 	top: 1px;
