@@ -1,50 +1,58 @@
 /*
 Colour Palette:
-#006D77 <- navbar background
+    #006D77 <- navbar background
 #83C5BE <- navbar text
-#EDF6F9 <- page background
-#FFDDD2 <- card background
-#E29578 <- card text
+    #EDF6F9 <- page background
+    #FFDDD2 <- card background
+    #E29578 <- card text
 */
+
+:root {
+    --background: #EDF6F9;
+    --accent: #006D77;
+    --accentlight: #83C5BE;
+    --mainpink: #FFDDD2;
+    --secondpink: #E29578;
+  }
 
 /* add background colour */
 body {
-    background-color: #EDF6F9;
+    background-color: var(--background);
 }
 
 /* add text colour to p tags */
 p {
-    color: #006D77;
+    color: var(--accent);
 }
 
 /* add text colour to labels */
 label {
-    color: #006D77;
+    color: var(--accent);
 }
 
 /* add text colour to headings */
 h1 {
-    color: #006D77;
+    color: var(--accent);
 }
 /* add styling to buttons */
 .buttonStyle {
-    background-color: #FFDDD2;
-    color: #E29578;
+    background-color: var(--mainpink);
+    color: var(--secondpink);
     margin-top: 10px;
 }
 
 .btn-primary:hover {
-    background-color: #E29578;
-    color:#FFDDD2;
+    background-color:var(--secondpink);
+    color:var(--mainpink);
 }
 
 /* navBar styling */
 .navbarStyle {
-    background-color: #006D77;
+    background-color: var(--accent);
 }
 
 .navbarText {
-    color: #83C5BE;
+    color: var(--accentlight);
 }
 
 .activeLink {
@@ -59,8 +67,8 @@ h1 {
 
 /* card styling */
 .cardStyle {
-    background-color: #83C5BE;
-    color:#006D77 ;
+    background-color: var(--accentlight);
+    color:(--navbar) ;
     border-radius: 40px;
     margin-top: 15px;
 }
@@ -69,7 +77,7 @@ h1 {
 /* moving element on homepage down and adding shadows */ 
 #homepagebox {
     position:relative;
-    background-color:  #EDF6F9;
+    background-color:  var(--background);
     opacity: 100%;
     margin-top: 150px;
     margin-bottom:-150px;
@@ -126,7 +134,7 @@ h1 {
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
     border-radius: 40px;
     padding: 15px 50px 50px 50px;
-    background-color:#EDF6F9 ;
+    background-color:var(--background);
 }
 
 .duckbox {
@@ -136,11 +144,11 @@ h1 {
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
     border-radius: 40px;
     padding: 15px 10px 15px 10px;
-    background-color:#EDF6F9 ;
+    background-color:var(--background);
 }
 
 footer {
-    background-color: #EDF6F9;
+    background-color:var(--background);
     opacity: 50%;
     margin-top:20px;
     border-radius: 40px;
@@ -155,7 +163,7 @@ footer {
     border-radius: 40px;
     padding: 0px;
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
-    background-color:#EDF6F9 ;
+    background-color:var(--background) ;
 }
 
 .aboutImage {
@@ -163,7 +171,7 @@ footer {
 }
 
 .aboutContainer {
-    background-color:#EDF6F9 ;
+    background-color:var(--background) ;
 }
 
 .imagenotavailable {

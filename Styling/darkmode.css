@@ -1,19 +1,17 @@
-/*
-Colour Palette:
-#202020 <- page background
-#232525 <- container background
-#b0b0b0 <- text
-*/
-
+:root {
+    --background: #202020;
+    --bodytext: #b0b0b0;
+    --container: #232525;
+  }
 
 /* add background colour */
 body {
-    background-color: #202020;
+    background-color: var(--background);
 }
 
 /* add text colour to p tags */
 p {
-    color: #b0b0b0;
+    color: var(--bodytext);
     opacity: 50%;
 }
 
@@ -23,33 +21,33 @@ p {
 
 /* add text colour to labels */
 label {
-    color: #b0b0b0;
+    color: var(--bodytext);
 }
 
 /* add text colour to headings */
 h1 {
-    color: #b0b0b0;
+    color: var(--bodytext);
 }
 
 /* add styling to buttons */
 .buttonStyle {
     background-color: #616464;
-    color: #b0b0b0;
+    color: var(--bodytext);
     margin-top: 10px;
 }
 
 .btn-primary:hover {
-    background-color:#232525;
+    background-color:var(--container);
     color: #E29578;
 }
 
 /* navBar styling */
 .navbarStyle {
-    background-color: #232525;
+    background-color: var(--container);
 }
 
 .navbarText {
-    color: #b0b0b0;
+    color: var(--bodytext);
 }
 
 .activeLink {
@@ -64,7 +62,7 @@ h1 {
 
 /* card styling */
 .cardStyle {
-    background-color: #232525;
+    background-color:var(--container);
     border-radius: 40px;
     margin-top: 15px;
 }
@@ -78,7 +76,7 @@ h1 {
     border-radius: 40px;
     /* x offset, y offset, blur radius, colour*/
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.12);
-    background-color: #232525;
+    background-color:var(--container);
 }
 
 #containerbox {
@@ -86,7 +84,7 @@ h1 {
     padding:50px;
     /* x offset, y offset, blur radius, colour*/
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
-    background-color: #232525;
+    background-color: var(--container);
 }
 
 .nav-item a:hover {
@@ -119,8 +117,7 @@ h1 {
 }
 
 .pagebody {
-    background: rgb(0,109,119);
-    background: linear-gradient(36deg, rgba(0,109,119,1) 0%, rgba(131,197,190,1) 100%);
+    background: var(--background);
 }
 
 .moreinfobox {
