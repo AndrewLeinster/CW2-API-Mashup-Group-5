@@ -237,7 +237,7 @@ padding-bottom: -15px;
   }
   
   input:checked + .slider {
-    background-color: #000000;
+    background-color:var(--background);
   }
   
   input:focus + .slider {
