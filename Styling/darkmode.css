@@ -2,6 +2,7 @@
     --background: #202020;
     --bodytext: #b0b0b0;
     --container: #232525;
+    --accent: #E29578;
   }
 
 /* add background colour */
@@ -12,7 +13,9 @@ body {
 /* add text colour to p tags */
 p {
     color: var(--bodytext);
-    opacity: 50%;
+}
+h1 {
+    color: var(--bodytext);
 }
 
 #inputbox {
@@ -24,21 +27,20 @@ label {
     color: var(--bodytext);
 }
 
-/* add text colour to headings */
-h1 {
-    color: var(--bodytext);
-}
 
 /* add styling to buttons */
 .buttonStyle {
-    background-color: #616464;
-    color: var(--bodytext);
+    background-color: var(--container);
+    border-color: var(--accent);
+    border-style: solid;
+    border-width: 1px;
+    color: var(--accent);
     margin-top: 10px;
 }
 
 .btn-primary:hover {
-    background-color:var(--container);
-    color: #E29578;
+    background-color:var(--accent);
+    color: var(--container);
 }
 
 /* navBar styling */
@@ -65,6 +67,11 @@ h1 {
     background-color:var(--container);
     border-radius: 40px;
     margin-top: 15px;
+}
+
+.cardtitle {
+    color:var(--bodytext);
+    font-size:20px;
 }
 
 
@@ -127,7 +134,7 @@ h1 {
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
     border-radius: 40px;
     padding: 15px 50px 50px 50px;
-    background-color:#EDF6F9 ;
+    background-color:var(--background) ;
 }
 
 .duckbox {
@@ -137,11 +144,11 @@ h1 {
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
     border-radius: 40px;
     padding: 15px 10px 15px 10px;
-    background-color:#EDF6F9 ;
+    background-color:var(--background) ;
 }
 
 footer {
-    background-color: #232525;
+    background-color:var(--container) ;
     opacity: 50%;
     margin-top:20px;
     border-radius: 40px;
@@ -156,7 +163,7 @@ footer {
     border-radius: 40px;
     padding: 0px;
     box-shadow: 4px 4px 25px hsl(0deg 0% 0% / 0.07);
-    background-color:#EDF6F9 ;
+    background-color:var(--background) ;
 }
 
 .aboutImage {

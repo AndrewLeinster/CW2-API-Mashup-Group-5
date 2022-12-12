@@ -27,7 +27,7 @@ function changeCSS() {
         light = true;
 
     }
-console.log("output")
+
 document.getElementById("head").replaceChild(newlink, oldlink);
     
 }
