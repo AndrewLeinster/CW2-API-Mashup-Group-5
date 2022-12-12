@@ -32,18 +32,14 @@ function getData() {
                     var p3 = createNode("p");
                     var a = createNode("a");
                     var column = createNode("div");
-                    var card = createNode("div");
                     var cardBody = createNode("div");
 
                     cardBody.classList.add("card-body");
                     cardBody.classList.add("p-3")
-                    card.classList.add("card");
-                    card.classList.add("mt-3");
-                    column.classList.add("cardStyle");
-                    card.classList.add("cardStyle");
+                    cardBody.classList.add("px-5")
+                    cardBody.classList.add("py-4")
                     column.classList.add("col-md-4");
                     h2.classList.add("card-title");
-                    h2.classList.add("cardStyle");
                     p.classList.add("card-text");
                     p1.classList.add("card-text");
                     p2.classList.add("card-text");
@@ -55,11 +51,8 @@ function getData() {
                     p3.innerHTML = "Time: " + data.currentConditions.datetime;
                     a.classList.add("btn");
                     a.classList.add("btn-primary");
+                    a.classList.add("buttonStyle");
                     a.innerHTML = "More Info"
-                    p.classList.add("cardStyle");
-                    p1.classList.add("cardStyle");
-                    p2.classList.add("cardStyle");
-                    p3.classList.add("cardStyle");
                     //will make this link to a more info page later
                     a.href = "./Pages/moreinfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
                     console.log(a.href)

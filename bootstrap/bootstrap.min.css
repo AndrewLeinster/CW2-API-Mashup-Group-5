@@ -14,6 +14,8 @@
  */
 @import url(https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap);
 
+
+
 :root {
     --bs-blue: #378dfc;
     --bs-indigo: #6610f2;
@@ -4742,11 +4744,7 @@ fieldset:disabled .btn {
     --bs-card-spacer-y: 1.5rem;
     --bs-card-spacer-x: 1.5rem;
     --bs-card-title-spacer-y: 0.5rem;
-    --bs-card-border-width: 0;
-    --bs-card-border-color: var(--bs-border-color-translucent);
-    --bs-card-border-radius: 0.375rem;
     --bs-card-box-shadow: ;
-    --bs-card-inner-border-radius: 0.375rem;
     --bs-card-cap-padding-y: 0.75rem;
     --bs-card-cap-padding-x: 1.5rem;
     --bs-card-cap-bg: transparent;
@@ -4764,9 +4762,6 @@ fieldset:disabled .btn {
     word-wrap: break-word;
     background-color: var(--bs-card-bg);
     background-clip: border-box;
-    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
-    border-radius: var(--bs-card-border-radius);
-    box-shadow: var(--bs-card-box-shadow)
 }
 
 .card>hr {
@@ -13112,18 +13107,6 @@ fieldset:disabled .btn {
 .progress-bar:last-child {
     border-top-right-radius: 50rem;
     border-bottom-right-radius: 50rem
-}
-
-.card {
-    box-shadow: inset 2px 2px 6px rgba(109, 114, 121, .2), inset -3px -2px 4px rgba(255, 255, 255, .2)
-}
-
-.card-primary {
-    box-shadow: inset 2px 2px 6px rgba(11, 28, 50, .05), inset -3px -2px 4px rgba(215, 232, 254, .2)
-}
-
-.card-secondary {
-    box-shadow: inset 2px 2px 6px rgba(43, 45, 48, .05), inset -3px -2px 4px rgba(247, 249, 252, .2)
 }
 
 .card-success {
