@@ -197,9 +197,81 @@ padding-bottom: -15px;
     padding-bottom: 12pt;
 }
 
+
 .infomaychange {
     opacity: 25%;
     font-size: 15px;
     padding-bottom: -15px;
+
+  /* Favourites Buttons */
+  .heartbutton{
+
+    border: none;
+
+    color: white;
+
+    padding: 15px 32px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 16px;
+
+    margin: 4px 2px;
+
+    cursor: pointer;
+
+  }
+
+  .heart_container{
+
+    background-color: hwb(0 100% 0%);
+
+    border-radius: 50px;
+
+    box-shadow: 0 5px 10px rgb(211, 211, 211);
+
+    display: inline-block;
+
+    width:34px;
+
+    height:34px;
+
+    text-align:center;
+
+    line-height:44px;
+
+}
+
+#heart{
+
+    font-size: 25px;
+
+    color: darkgray;
+
+}
+
+#heart:hover{
+
+    color:red;
+
+    cursor: pointer;
+
+}
+
+.faqHeading{
+    margin-bottom: 15px;
+}
+
+.faqText{
+    margin-bottom: 55px;
+
+.tosHeading{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
