@@ -56,9 +56,10 @@ function getData() {
                     p3.innerHTML = "Time: " + data.currentConditions.datetime;
                     a.classList.add("btn");
                     a.classList.add("btn-primary");
-
                     a.innerHTML = "More Info";
                     div.classList.add("heart_container");
+                    cardBody.setAttribute("id", "newFavourite");
+                    i.setAttribute("onclick", "saveItem()")
                     i.classList.add("fa-regular");
                     i.classList.add("fa-heart");
                     i.setAttribute("id","heart");
@@ -69,7 +70,6 @@ function getData() {
                     a.href = "./Pages/moreinfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
                     console.log(a.href)
                     weatherContainer.classList.add("cardStyle");
-    
                     append(cardBody, h2);
                     append(cardBody, p);
                     append(cardBody, p1);
@@ -80,7 +80,7 @@ function getData() {
                     append(cardBody, div);
                     append(column, cardBody);
                     append(weatherContainer, column);
-        
+                    console.log(weatherContainer)
                 })
 
 
@@ -88,6 +88,17 @@ function getData() {
         .catch(function (error) {
             console.log(error);
         });
+}
+
+//adding item to list
+function saveItem() {
+    var storedList = localStorage.getItem("favouriteItems")
+    storedList = JSON.parse(storedList)
+    console.log(storedList);
+    storedList.push(document.getElementById("newFavourite").value);
+    localStorage.setItem("favouriteItems", JSON.stringify(storedList));
+    updateFavouriteList();
+    document.getElementById("newFavourite").value = "";
 }
 
 function updateFavouriteList() {
@@ -99,14 +110,14 @@ function updateFavouriteList() {
         printNoFavourites();
     } else {
         storedList = JSON.parse(localStorage.getItem("favouriteItems")); //get localstorage and turn into array
-        toDoContainer = document.createElement('div'); //go through array and write a new alert box for each
+        favouritesContainer = document.createElement('div'); //go through array and write a new alert box for each
         storedList.forEach(function (item, index) {
             div = document.createElement('div');
             div.setAttribute('class', 'mb-2 col-md-12');
-            div.innerHTML = "<div class='alert alert-primary mb-1' onClick='complete(" + index + ")' id=item-" + index + ")'><p class='mb-0'><i class='far fa-circle mr-4'></i>" + " " + item + "</p></div>";
-            toDoContainer.appendChild(div);
+            div.innerHTML = "<div class='alert alert-primary mb-1' id=item-" + index + ")'><p class='mb-0'><i class='far fa-circle mr-4'></i>" + " " + item + "</p></div>";
+            favouritesContainer.appendChild(div);
         });
-        document.getElementById('containerbox').innerHTML = favourites.innerHTML;
+        document.getElementById('containerbox').innerHTML = favouritesContainer.innerHTML;
     }
 }
 
