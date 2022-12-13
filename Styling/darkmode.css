@@ -196,3 +196,9 @@ padding-bottom: -15px;
     opacity: 40%;
     padding-bottom: 12pt;
 }
+
+.infomaychange {
+    opacity: 25%;
+    font-size: 15px;
+    padding-bottom: -15px;
+}
