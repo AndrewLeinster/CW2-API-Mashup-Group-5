@@ -78,7 +78,7 @@ fetch(url)
             let finalTime = time.split(":");;
             finalTime.pop();
             finalTime = finalTime.toString().replaceAll(",",":")
-            column.classList.add("col-md-6")
+            //column.classList.add("col-md-6")
             column.classList.add("mt-5");
             a.classList.add("btn");
             a.classList.add("btn-primary");
@@ -99,9 +99,7 @@ fetch(url)
             p4.innerHTML = text4.innerHTML.bold() + wether.windspeed + "mph";
             text5.innerHTML = "Precipitation : "
             p5.innerHTML = text5.innerHTML.bold() + wether.precip + "mm";
-            a.innerHTML = "Back";
-            a.href = "../index.html";
-
+           
             append(column, h1);
             append(column, p4);
             append(column, p);
@@ -110,7 +108,6 @@ fetch(url)
             append(column, p3);
             append(column, p4);
             append(column, p5);
-            append(column, a);
             append(moreInfoContainer, column);
         })
 
