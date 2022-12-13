@@ -37,11 +37,7 @@ function getData() {
 	const weatherContainer = document.getElementById("weather");
 	let searchedCity = document.getElementById("location").value;
 	let date = document.getElementById("dateTime").value;
-	console.log(date)
-	console.log(searchedCity)
 	url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + searchedCity + "/" + date + ":00/?key=5KP9KEBYVW933PV52J78QTRGX&include=current";
-	console.log(url)
-	console.log(searchedCity)
 	fetch(url)
 		// convert to JSON
 		.then((resp) => resp.json())
@@ -102,10 +98,8 @@ function getData() {
 				//This code does make something happen, but sets all cities to the same each time
 				cityName = localStorage.setItem("name", JSON.stringify(data.address))
 
-				//will make this link to a more info page later
-				a.href = "./Pages/moreinfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
+				a.href = "./Pages/moreInfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
 				console.log("This")
-				console.log(a.href)
 				weatherContainer.classList.add("cardStyle");
 				append(cardBody, h2);
 				append(cardBody, p);
@@ -181,13 +175,6 @@ function printNoFavourites() {
 	document.getElementById('containerbox').innerHTML = nofavourites;
 }
 
-
-
-
-
-
-
-
 //
 window.onload = (checkCSS);
 
@@ -255,6 +242,3 @@ function changeCSS() {
 	document.getElementById("head").replaceChild(newlink, oldlink);
 
 }
-
-
-
