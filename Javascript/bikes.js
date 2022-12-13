@@ -37,7 +37,9 @@ fetch(bikeUrl)
             .then((resp) => resp.json())
             .then(function (data2) {
                 var bikes = data2.network.stations;
-                return bikes.map(function (bike) {
+                //only get first 9 bikes to make more readable
+                var slicedBikes = bikes.slice(0,9);
+                return slicedBikes.map(function (bike) {
                     var p3 = createNode("p");
                     var text3 = createNode("p");
                     var text4 = createNode("p");
@@ -60,7 +62,7 @@ fetch(bikeUrl)
                     text.classList.add("card-text");
                     text3.classList.add("card-text");
                     text4.classList.add("card-text");
-                    column.classList.add("col-md-3");
+                    column.classList.add("col-md-4");
                     column.classList.add("d-flex");
                     column.classList.add("align-items-stretch")
                     p5.innerHTML = data2.network.name;
