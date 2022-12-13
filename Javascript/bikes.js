@@ -21,10 +21,8 @@ function capitaliseFirstLetter(string) {
 //https://stackoverflow.com/questions/10679580/javascript-search-inside-a-json-object
 
 var bikeUrl = "https://api.citybik.es/v2/networks";
-console.log(bikeUrl)
 const bikesContainer = document.getElementById("bikes");
 let searchedCity = capitaliseFirstLetter(city);
-console.log(searchedCity)
 fetch(bikeUrl)
     .then((resp) => resp.json())
     .then(function (data) {
@@ -55,7 +53,6 @@ fetch(bikeUrl)
                 text2.innerHTML = "Company: " + p2.innerHTML.bold();
 
                 var bikes = data2.network.stations;
-                console.log(bikes)
                 return bikes.map(function (bike) {
                     var p3 = createNode("p");
                     var p1 = createNode("p");
@@ -63,7 +60,6 @@ fetch(bikeUrl)
                     var text3 = createNode("p");
                     var text4 = createNode("p");
                     var p5 = createNode("p");
-                    var text5 = createNode("p");
                     var a = createNode("a");
 
                     p1.classList.add("infomaychange");

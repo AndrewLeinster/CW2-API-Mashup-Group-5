@@ -13,18 +13,12 @@ function getData() {
     const weatherContainer = document.getElementById("weather");
     let searchedCity = document.getElementById("location").value;
     let date = document.getElementById("dateTime").value;
-    console.log(date)
-    console.log(searchedCity)
     url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + searchedCity + "/" + date + ":00/?key=5KP9KEBYVW933PV52J78QTRGX&include=current";
-    console.log(url)
-    console.log(searchedCity)
     fetch(url)
         // convert to JSON
         .then((resp) => resp.json())
         .then(function (data) {
-            console.log(data);
             var weather = data.days;
-            console.log(weather)
             return weather.map(function (wether) {
                     var h2 = createNode("h2");
                     var p = createNode("p");
@@ -65,7 +59,6 @@ function getData() {
 
                     //will make this link to a more info page later
                     a.href = "./Pages/moreInfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
-                    console.log(a.href)
                     weatherContainer.classList.add("cardStyle");
     
                     append(cardBody, h2);

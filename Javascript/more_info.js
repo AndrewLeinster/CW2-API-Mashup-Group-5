@@ -8,7 +8,6 @@ function append(parent, el) {
 }
 
 currentLocation = window.location.href;
-//console.log(currentLocation);
 var searchString = currentLocation.split("?");
 var city = searchString[1].toLowerCase();
 let date = searchString[2];
@@ -18,14 +17,11 @@ var time = searchString[3];
 //api to get photos of the city. Doesn't have every city, but better than nothing?
 let cityUrl = "https://api.teleport.org/api/urban_areas/slug:" + city + "/images/"
 //let cityUrl = "https://api.teleport.org/api/urban_areas/slug:glasgow/images/"
-console.log(cityUrl);
 const moreInfobgContainer = document.getElementById("moreInfobg");
 fetch(cityUrl)
     .then((resp) => resp.json())
     .then(function (data2) {
-        console.log(data2);
         var cities = data2.photos;
-        console.log(cities)
         return cities.map(function(city) {
             var bgimage = createNode("div");
             var img = createNode("img");
@@ -45,14 +41,11 @@ fetch(cityUrl)
 
 //get all weather data
 let url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + city + "/" + date + "T" + time + "/?unitGroup=uk&key=5KP9KEBYVW933PV52J78QTRGX&include=current";
-//console.log(url);
 const moreInfoContainer = document.getElementById("moreInfo");
 fetch(url)
     .then((resp) => resp.json())
     .then(function (data) {
-        //console.log(data);
         var weather = data.days;
-        //console.log(weather)
         return weather.map(function (wether) {
             var h1 = createNode("h1");
             var p = createNode("p");
