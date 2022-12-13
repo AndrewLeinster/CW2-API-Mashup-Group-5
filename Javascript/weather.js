@@ -9,16 +9,21 @@ function append(parent, el) {
 }
 
 document.getElementById("clear").addEventListener("click", function () { clearfavourites() });
-document.getElementById("submit").addEventListener("click", function () { getData() });
+document.getElementById("submit").addEventListener("click", function () { additem() });
 
-document.getElementById("submit").addEventListener("keyup", function (event) {
-	if (event.code === "Enter") {
-		// prevent default action
-		event.preventDefault();
+document.getElementById("submit").addEventListener("onkeydown", function () { additem() });
 
-		getData();
+function additem() {
+	console.log('removing children')
+
+	var div = document.getElementById('weather');
+	while(div.firstChild){
+		div.removeChild(div.firstChild);
+		console.log('removed +' + div.firstChild)
 	}
-});
+
+	getData();
+}
 
 function clearfavourites() {
 	console.log('clearing')
