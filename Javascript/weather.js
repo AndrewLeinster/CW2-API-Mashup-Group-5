@@ -66,7 +66,7 @@ function getData() {
                     a.innerHTML = "More Info"
 
                     //will make this link to a more info page later
-                    a.href = "./Pages/moreinfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
+                    a.href = "./Pages/moreInfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
                     console.log(a.href)
                     weatherContainer.classList.add("cardStyle");
     
