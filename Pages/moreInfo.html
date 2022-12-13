@@ -39,31 +39,45 @@
     </nav>
 
     <main>
+        <!--More weather information-->
         <div class="container moreinfobox">
-            <div class="row"><p class="imagenotavailable">Some cities may not have images available</p></div>
-                <div class="row" id="moreInfobg"></div>
-                <div class="row" id="moreInfo"></div>
+            <div class="row">
+                <p class="imagenotavailable">Some cities may not have images available</p>
+            </div>
+            <div class="row" id="moreInfobg"></div>
+            <div class="row">
+                <div id="moreInfo"></div>
+                <!--Bikes Information-->
+                <div id="bikes">
+                </div>
+            </div>
         </div>
+
+       
     </main>
-    <!-- Photos and containers will most likely be added here via javaScript, if need be I can add containers with specific id's to make things easier-->
 
     <div class="container-fluid  text-center p-2 mt-5">
         <footer>
+
           <ul class="list-unstyled">
             <li>
               <p>Created by: Andrew Leinster, Iona Cavill, Adam Munro, Laura Clark, Rickie Kumar and Oscar Weir</p>
             </li>
-            <li><a href="">Terms of Service</a></li>
-            <li><a href="">FAQ</a></li>
+
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./termsOfService.html">Terms of Service</a></li>
+
           </ul>
         </footer>
-      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <script src="../Javascript/bikes.js"></script>
     <script src="../Javascript/more_info.js"></script>
     <script src="../Javascript/theme_pages.js"></script>
+    
 </body>
 
 </html>
