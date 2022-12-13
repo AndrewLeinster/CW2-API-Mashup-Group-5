@@ -9,6 +9,16 @@ function append(parent, el) {
 }
 
 document.getElementById("submit").addEventListener("click", function () { getData() });
+
+document.getElementById("submit").addEventListener("keyup", function(event){
+    if (event.code === "Enter") {
+        // prevent default action
+        event.preventDefault();
+        
+        getData();
+    }
+});
+
 function getData() {
     const weatherContainer = document.getElementById("weather");
     let searchedCity = document.getElementById("location").value;
@@ -48,6 +58,7 @@ function getData() {
                 p2.classList.add("card-text");
                 p3.classList.add("card-text");
                 h2.innerHTML = data.address;
+                h2.setAttribute("id", "cityName");
                 p.innerHTML = "Conditions: " + wether.conditions;
                 p1.innerHTML = "Description: " + wether.description;
                 p2.innerHTML = "Date: " + wether.datetime;
@@ -124,11 +135,15 @@ function updateFavouriteList() {
     } else {
         storedList = JSON.parse(localStorage.getItem("favouriteItems")); //get localstorage and turn into array
         favouritesContainer = document.createElement('div'); //go through array and write a new alert box for each
+
+
         storedList.forEach(function (item, index) {
             div2 = createNode('div');
             div2.setAttribute('class', 'mb-2 col-md-12');
             div2.innerHTML = "<div><p>" + JSON.parse(localStorage.getItem("name")) + "</p></div>";
-            favouritesContainer.appendChild(div2);
+            append(favouritesContainer, div2);
+
+
         });
         document.getElementById('containerbox').innerHTML = favouritesContainer.innerHTML;
     }
