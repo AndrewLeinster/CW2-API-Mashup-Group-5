@@ -138,6 +138,7 @@ function saveItem() {
 	localStorage.setItem("favouriteItems", JSON.stringify(storedList));
 	updateFavouriteList();
 	document.getElementById("newFavourite").value = "";
+
 }
 
 function updateFavouriteList() {
