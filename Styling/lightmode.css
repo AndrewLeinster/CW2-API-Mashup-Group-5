@@ -101,22 +101,54 @@ h1 {
     box-shadow: 5px 5px 10px 5px #005961;
 }
 
-.nav-item a {
-    font-size: 20pt;
-    border-radius: 25px;
-    margin-left: 15px;
-    padding: 10px;
-}
+@media (min-width: 600px) {
 
-.navbar-brand{
-    border-radius: 15px;
-    padding: 5px;
-}
-
-.navbar-brand img{
-    height: 50px;
-    width: 100%;
-}
+    .nav-item a {
+        font-size: 20pt;
+        border-radius: 25px;
+        margin-left: 15px;
+        padding: 10px;
+    }
+    
+    .navbar-brand{
+        border-radius: 15px;
+        padding: 5px;
+    }
+    
+    .navbar-brand img{
+        height: 50px;
+        width: 100%;
+    }
+    
+    }
+    
+    @media (max-width: 600px) {
+    
+        #themebtn {
+            font-size: 60%;
+            padding: 35px 10px;
+            line-height: 1;
+            border-radius: 30px;
+        }
+    
+        .nav-item a {
+            font-size: 18pt;
+            border-radius: 20px;
+            margin-left: 3px;
+            padding: 7px;
+        }
+    
+        .navbar-brand{
+            border-radius: 15px;
+            margin-right: 1px;
+            padding: 3px;
+        }
+    
+        .navbar-brand img{
+            height: 40px;
+            width: 100%;
+        }
+    }
 
 .mainimg{
     opacity: 90%;
@@ -197,6 +229,13 @@ padding-bottom: -15px;
     padding-bottom: 12pt;
 }
 
+
+.infomaychange {
+    opacity: 25%;
+    font-size: 15px;
+    padding-bottom: -15px;
+   }
+
   /* Favourites Buttons */
   .heartbutton{
 
@@ -222,13 +261,7 @@ padding-bottom: -15px;
 
   .heart_container{
 
-    background-color: hwb(0 100% 0%);
-
-    border-radius: 50px;
-
-    box-shadow: 0 5px 10px rgb(211, 211, 211);
-
-    display: inline-block;
+    background-color: var(--container);
 
     width:34px;
 
@@ -238,13 +271,16 @@ padding-bottom: -15px;
 
     line-height:44px;
 
+    float: right;
+
 }
 
 #heart{
 
     font-size: 25px;
 
-    color: darkgray;
+    color: var(--mainpink);
+
 
 }
 
@@ -254,7 +290,12 @@ padding-bottom: -15px;
 
     cursor: pointer;
 
+
 }
+
+#heart:active{
+
+    color:red;
 
 .faqHeading{
     margin-bottom: 15px;
@@ -267,6 +308,4 @@ padding-bottom: -15px;
 .tosHeading{
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
-
