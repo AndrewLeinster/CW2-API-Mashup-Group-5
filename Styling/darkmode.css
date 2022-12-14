@@ -133,15 +133,16 @@ label {
         }
     
         .nav-item a {
-            font-size: 20pt;
+            font-size: 18pt;
             border-radius: 20px;
-            margin-left: 5px;
+            margin-left: 3px;
             padding: 7px;
         }
     
         .navbar-brand{
             border-radius: 15px;
-            padding: 5px;
+            margin-right: 1px;
+            padding: 3px;
         }
     
         .navbar-brand img{
