@@ -228,6 +228,12 @@ padding-bottom: -15px;
     padding-bottom: 12pt;
 }
 
+.infomaychange {
+    opacity: 25%;
+    font-size: 15px;
+    padding-bottom: -15px;
+}
+
   /* Favourites Buttons */
   .heartbutton{
 
@@ -286,3 +292,33 @@ padding-bottom: -15px;
     cursor: pointer;
 
 }
+<<<<<<< HEAD
+=======
+
+
+@media (max-width: 600px) {
+    #themebtn {
+        font-size: 60%;
+        padding: 35px 10px;
+        line-height: 1;
+        border-radius: 30px;
+    }
+}
+
+
+.faqHeading{
+    margin-bottom: 15px;
+}
+
+.faqText{
+    margin-bottom: 55px;
+}
+
+.tosHeading{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+>>>>>>> 04fb2e535c7a985ff557a086abdeabe3ce7d74a7
