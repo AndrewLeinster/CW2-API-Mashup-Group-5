@@ -124,6 +124,7 @@ label {
     border-radius: 40px;
     width: 100%;
     margin-top: 5px;
+    filter: brightness(75%)
 }
 
 .pagebody {
@@ -171,6 +172,7 @@ footer {
 
 .aboutImage {
     border-radius: 40px;
+    filter: brightness(75%)
 }
 
 .aboutContainer {
@@ -190,6 +192,7 @@ padding-bottom: -15px;
     margin-right: auto;
     width: 50%;
     border-radius: 40px;
+    filter: brightness(75%)
 }
 
 .homepagetext {
@@ -220,21 +223,13 @@ padding-bottom: -15px;
 
     font-size: 16px;
 
-    margin: 4px 2px;
-
     cursor: pointer;
 
   }
 
   .heart_container{
 
-    background-color: hwb(0 100% 0%);
-
-    border-radius: 50px;
-
-    box-shadow: 0 5px 10px rgb(211, 211, 211);
-
-    display: inline-block;
+    background-color: var(--container);
 
     width:34px;
 
@@ -244,13 +239,16 @@ padding-bottom: -15px;
 
     line-height:44px;
 
+    float: right;
+
 }
 
 #heart{
 
     font-size: 25px;
 
-    color: darkgray;
+    color: var(--accent);
+
 
 }
 
@@ -262,6 +260,13 @@ padding-bottom: -15px;
 
 }
 
+#heart:active{
+
+    color:red;
+
+    cursor: pointer;
+
+}
 
 @media (max-width: 600px) {
     #themebtn {
