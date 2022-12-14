@@ -76,14 +76,15 @@ function getData() {
 				a.classList.add("btn");
 				a.classList.add("btn-primary");
 				a.innerHTML = "More Info";
+				a.classList.add("buttonStyle");
 				div.classList.add("heart_container");
 				cardBody.setAttribute("id", "newFavourite");
 				i.setAttribute("onclick", "saveItem()")
 				i.classList.add("fa-regular");
 				i.classList.add("fa-heart");
+				i.classList.add("align-middle");
 				i.setAttribute("id", "heart");
-				a.classList.add("buttonStyle");
-				a.innerHTML = "More Info"
+
 
 				//save city name to local storage
 				/* This doesn't work
