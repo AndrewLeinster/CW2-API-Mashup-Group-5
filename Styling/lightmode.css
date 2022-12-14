@@ -101,22 +101,53 @@ h1 {
     box-shadow: 5px 5px 10px 5px #005961;
 }
 
-.nav-item a {
-    font-size: 20pt;
-    border-radius: 25px;
-    margin-left: 15px;
-    padding: 10px;
-}
+@media (min-width: 600px) {
 
-.navbar-brand{
-    border-radius: 15px;
-    padding: 5px;
-}
-
-.navbar-brand img{
-    height: 50px;
-    width: 100%;
-}
+    .nav-item a {
+        font-size: 20pt;
+        border-radius: 25px;
+        margin-left: 15px;
+        padding: 10px;
+    }
+    
+    .navbar-brand{
+        border-radius: 15px;
+        padding: 5px;
+    }
+    
+    .navbar-brand img{
+        height: 50px;
+        width: 100%;
+    }
+    
+    }
+    
+    @media (max-width: 600px) {
+    
+        #themebtn {
+            font-size: 60%;
+            padding: 35px 10px;
+            line-height: 1;
+            border-radius: 30px;
+        }
+    
+        .nav-item a {
+            font-size: 20pt;
+            border-radius: 20px;
+            margin-left: 5px;
+            padding: 7px;
+        }
+    
+        .navbar-brand{
+            border-radius: 15px;
+            padding: 5px;
+        }
+    
+        .navbar-brand img{
+            height: 40px;
+            width: 100%;
+        }
+    }
 
 .mainimg{
     opacity: 90%;
@@ -270,16 +301,6 @@ padding-bottom: -15px;
 
 }
 
-@media (max-width: 600px) {
-
-    #themebtn {
-        font-size: 60%;
-        padding: 35px 10px;
-        line-height: 1;
-        border-radius: 30px;
-    }
-}
-
 .faqHeading{
     margin-bottom: 15px;
 }
@@ -294,4 +315,3 @@ padding-bottom: -15px;
 
 
 }
-
