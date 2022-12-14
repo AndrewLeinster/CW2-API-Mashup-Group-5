@@ -54,12 +54,13 @@ fetch(url)
             var p3 = createNode("p");
             var p4 = createNode("p");
             var p5 = createNode("p");
+            var p6 = createNode("p");
             var text = createNode("p");
             var text1 = createNode("p");
             var text2 = createNode("p");
             var text3 = createNode("p");
-            var text4 = createNode("p");
             var text5 = createNode("p");
+            var text6 = createNode("p");
             var column = createNode("div");
             var a = createNode("a");
 
@@ -78,23 +79,22 @@ fetch(url)
             a.classList.add("buttonStyle");
             a.classList.add("btn-primary:hover");
             h1.innerHTML = data.resolvedAddress;
-            text4.innerHTML = "Date and time: ";
-            p4.innerHTML = text4.innerHTML.bold() + finalDate + " " + finalTime;
-            text.innerHTML = "Description: ";
-            p.innerHTML = text.innerHTML.bold() + wether.description;
-            text1.innerHTML = "Sunrise: "
-            p1.innerHTML = text1.innerHTML.bold() + wether.sunrise;
-            text2.innerHTML = "Sunset: ";
-            p2.innerHTML = text2.innerHTML.bold() + wether.sunset;
-            text3.innerHTML = "Temperature: "
-            p3.innerHTML = text3.innerHTML.bold() + wether.temp + "°C";
-            text4.innerHTML = "Wind Speed: "
-            p4.innerHTML = text4.innerHTML.bold() + wether.windspeed + "mph";
-            text5.innerHTML = "Precipitation : "
-            p5.innerHTML = text5.innerHTML.bold() + wether.precip + "mm";
+            p6.innerHTML =  "Date and time: " + finalDate.bold() + " " + finalTime.bold();
+            p.innerHTML = "Description: " + wether.description.bold();
+            p1.innerHTML = "Sunrise: " + wether.sunrise.bold();
+            p2.innerHTML = "Sunset: " + wether.sunset.bold();
+            text3.innerHTML = "°C";
+            text2.innerHTML = wether.temp;
+            p3.innerHTML =  "Temperature: " + text2.innerHTML.bold() + text3.innerHTML.bold();
+            text.innerHTML = wether.windspeed;
+            text1.innerHTML = "mph";
+            p4.innerHTML = "Wind Speed: " + text.innerHTML.bold() + text1.innerHTML.bold();
+            text5.innerHTML = wether.precip;
+            text6.innerHTML = "mm";
+            p5.innerHTML = "Precipitation : " + text5.innerHTML.bold() + text6.innerHTML.bold()
            
             append(column, h1);
-            append(column, p4);
+            append(column, p6);
             append(column, p);
             append(column, p1);
             append(column, p2);

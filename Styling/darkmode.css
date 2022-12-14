@@ -102,28 +102,60 @@ label {
     box-shadow: 5px 5px 10px 5px #202020;
 }
 
-.nav-item a {
-    font-size: 20pt;
-    border-radius: 25px;
-    margin-left: 15px;
-    padding: 10px;
-}
+@media (min-width: 600px) {
 
-.navbar-brand{
-    border-radius: 15px;
-    padding: 5px;
-}
-
-.navbar-brand img{
-    height: 50px;
-    width: 100%;
-}
+    .nav-item a {
+        font-size: 20pt;
+        border-radius: 25px;
+        margin-left: 15px;
+        padding: 10px;
+    }
+    
+    .navbar-brand{
+        border-radius: 15px;
+        padding: 5px;
+    }
+    
+    .navbar-brand img{
+        height: 50px;
+        width: 100%;
+    }
+    
+    }
+    
+    @media (max-width: 600px) {
+    
+        #themebtn {
+            font-size: 60%;
+            padding: 35px 10px;
+            line-height: 1;
+            border-radius: 30px;
+        }
+    
+        .nav-item a {
+            font-size: 20pt;
+            border-radius: 20px;
+            margin-left: 5px;
+            padding: 7px;
+        }
+    
+        .navbar-brand{
+            border-radius: 15px;
+            padding: 5px;
+        }
+    
+        .navbar-brand img{
+            height: 40px;
+            width: 100%;
+        }
+    }
 
 .mainimg{
     opacity: 90%;
     border-radius: 40px;
     width: 100%;
     margin-top: 5px;
+    filter: brightness(75%)
 }
 
 .pagebody {
@@ -171,6 +203,7 @@ footer {
 
 .aboutImage {
     border-radius: 40px;
+    filter: brightness(75%)
 }
 
 .aboutContainer {
@@ -190,6 +223,7 @@ padding-bottom: -15px;
     margin-right: auto;
     width: 50%;
     border-radius: 40px;
+    filter: brightness(75%)
 }
 
 .homepagetext {
@@ -220,21 +254,13 @@ padding-bottom: -15px;
 
     font-size: 16px;
 
-    margin: 4px 2px;
-
     cursor: pointer;
 
   }
 
   .heart_container{
 
-    background-color: hwb(0 100% 0%);
-
-    border-radius: 50px;
-
-    box-shadow: 0 5px 10px rgb(211, 211, 211);
-
-    display: inline-block;
+    background-color: var(--container);
 
     width:34px;
 
@@ -244,13 +270,16 @@ padding-bottom: -15px;
 
     line-height:44px;
 
+    float: right;
+
 }
 
 #heart{
 
     font-size: 25px;
 
-    color: darkgray;
+    color: var(--accent);
+
 
 }
 
@@ -262,16 +291,13 @@ padding-bottom: -15px;
 
 }
 
+#heart:active{
 
-@media (max-width: 600px) {
-    #themebtn {
-        font-size: 60%;
-        padding: 35px 10px;
-        line-height: 1;
-        border-radius: 30px;
-    }
+    color:red;
+
+    cursor: pointer;
+
 }
-
 
 .faqHeading{
     margin-bottom: 15px;
