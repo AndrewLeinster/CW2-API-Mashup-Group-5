@@ -223,7 +223,6 @@ function changeCSS() {
 		newlink.setAttribute("type", "text/css");
 		newlink.setAttribute("href", "Styling/darkmode.css");
 		newlink.setAttribute("id", "link");
-		newlink.setAttribute("id", "dark");
 		theme = 'dark';
 
 	} else {
@@ -233,7 +232,6 @@ function changeCSS() {
 		newlink.setAttribute("type", "text/css");
 		newlink.setAttribute("href", "Styling/lightmode.css");
 		newlink.setAttribute("id", "link");
-		newlink.setAttribute("id", "light");
 		theme = 'light';
 
 	}
