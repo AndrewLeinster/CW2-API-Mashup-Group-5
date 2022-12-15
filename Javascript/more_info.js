@@ -14,9 +14,8 @@ let date = searchString[2];
 var time = searchString[3];
 
 
-//api to get photos of the city. Doesn't have every city, but better than nothing?
+//API to get photos of the city. Doesn't have every city, but will catch most major ones
 let cityUrl = "https://api.teleport.org/api/urban_areas/slug:" + city + "/images/"
-//let cityUrl = "https://api.teleport.org/api/urban_areas/slug:glasgow/images/"
 const moreInfobgContainer = document.getElementById("moreInfobg");
 fetch(cityUrl)
     .then((resp) => resp.json())
@@ -31,8 +30,6 @@ fetch(cityUrl)
             append(bgimage, img)
             append(moreInfobgContainer, bgimage);
         })
-
-
     })
 
     .catch(function (error) {
@@ -64,8 +61,7 @@ fetch(url)
             var column = createNode("div");
             var a = createNode("a");
 
-
-            // make the date in a nicer more readable format
+            // make the date in a more readable format
             let finalDate = date.split("-").reverse().toString().replaceAll(",","/");
             
             //remove final zeros from the time to make it look nicer
@@ -103,8 +99,6 @@ fetch(url)
             append(column, p5);
             append(moreInfoContainer, column);
         })
-
-
     })
 
     .catch(function (error) {

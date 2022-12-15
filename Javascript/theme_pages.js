@@ -1,3 +1,4 @@
+// This works the same as the index page JS, however some links have had to be changed.
 window.onload = (checkCSS) => {
     var oldlink = document.getElementById("link");
     console.log("checkCSS")
