@@ -52,7 +52,7 @@ function getData() {
 				var p2 = createNode("p");
 				var p3 = createNode("p");
 				var a = createNode("a");
-				var div = createNode("div");
+				var btndiv = createNode("div");
 				var i = createNode("i");
 				var column = createNode("div");
 				var cardBody = createNode("div");
@@ -77,7 +77,7 @@ function getData() {
 				a.classList.add("btn-primary");
 				a.innerHTML = "More Info";
 				a.classList.add("buttonStyle");
-				div.classList.add("heart_container");
+				btndiv.classList.add("btncontainer")
 				cardBody.setAttribute("id", "newFavourite");
 				i.setAttribute("onclick", "saveItem()")
 				i.classList.add("fa-regular");
@@ -107,9 +107,9 @@ function getData() {
 				append(cardBody, p1);
 				append(cardBody, p2);
 				append(cardBody, p3);
-				append(cardBody, a);
-				append(div, i);
-				append(cardBody, div);
+				append(btndiv, a)
+				append(btndiv, i)
+				append(cardBody, btndiv)
 				append(column, cardBody);
 				append(weatherContainer, column);
 				console.log(weatherContainer)
