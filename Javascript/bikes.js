@@ -47,7 +47,6 @@ fetch(bikeUrl)
                     var p = createNode("p");
                     var text = createNode("p");
                     var h2 = createNode("h2");
-                    var a = createNode("a");
                     var text2 = createNode("h2");
                     var card = createNode("div");
                     var cardBody = createNode("div");
@@ -74,12 +73,6 @@ fetch(bikeUrl)
                     text2.classList.add("card-title");
                     p.innerHTML = cityName;
                     text.innerHTML = "City: " + p.innerHTML.bold();
-                    a.classList.add("btn");
-                    a.classList.add("btn-primary");
-                    a.classList.add("buttonStyle");
-                    a.classList.add("btn-primary:hover");
-                    a.innerHTML = "Back";
-                    a.href = "../index.html";
 
                     // get date time info
                     dInfo = bike.timestamp.split("T");
@@ -98,7 +91,6 @@ fetch(bikeUrl)
                     append(cardBody, text3);
                     append(cardBody, text4);
                     append(cardBody, p5);
-                    append(cardBody, a);
                     append(card, cardBody);
                     append(column, card);
                     append(bikesContainer, column);
