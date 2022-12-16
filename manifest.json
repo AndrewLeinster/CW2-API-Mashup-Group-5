@@ -10,13 +10,8 @@
    
     "icons": [
         {
-            "src": "Styling/Browser icon.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "Styling/Browser icon.png",
-            "sizes": "512x512",
+            "src": "Styling/PWAicon-144.png",
+            "sizes": "144x144",
             "type": "image/png"
         }
     ]
