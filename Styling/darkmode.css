@@ -238,50 +238,15 @@ padding-bottom: -15px;
     padding-bottom: -15px;
 }
 
-  /* Favourites Buttons */
-  .heartbutton{
-
-    border: none;
-
-    color: white;
-
-    padding: 15px 32px;
-
-    text-align: center;
-
-    text-decoration: none;
-
-    display: inline-block;
-
-    font-size: 16px;
-
-    cursor: pointer;
-
-  }
-
-  .heart_container{
-
-    background-color: var(--container);
-
-    width:34px;
-
-    height:34px;
-
-    text-align:center;
-
-    line-height:44px;
-
-    float: right;
-
-}
-
 #heart{
 
     font-size: 25px;
 
     color: var(--accent);
 
+    margin-left: 20px;
 
+    margin-top: 7px;
 }
 
 #heart:hover{
