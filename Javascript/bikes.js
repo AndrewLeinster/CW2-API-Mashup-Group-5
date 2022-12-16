@@ -19,7 +19,6 @@ function capitaliseFirstLetter(string) {
 }
 
 //https://stackoverflow.com/questions/10679580/javascript-search-inside-a-json-object
-
 var bikeUrl = "https://api.citybik.es/v2/networks";
 const bikesContainer = document.getElementById("bikes");
 let searchedCity = capitaliseFirstLetter(city);

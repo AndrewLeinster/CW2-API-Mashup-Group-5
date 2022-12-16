@@ -7,6 +7,7 @@
     "background_color": "#EDF6F9",
     "orientation": "portrait",
     "start_url": "https://andrewleinster.github.io/CW2-API-Mashup-Group-5/",
+   
     "icons": [
         {
             "src": "Styling/Brower icon.png",
