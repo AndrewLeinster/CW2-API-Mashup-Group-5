@@ -94,14 +94,20 @@ function getData() {
 				p.innerHTML = "Conditions: " + wether.conditions;
 				p1.innerHTML = "Description: " + wether.description;
 				p2.innerHTML = "Date: " + wether.datetime;
-				p3.innerHTML = "Time: " + data.currentConditions.datetime;
+
+				//remove final zeros from the time to make it look nicer
+				time = data.currentConditions.datetime;
+				let finalTime = time.split(":");;
+				finalTime.pop();
+				finalTime = finalTime.toString().replaceAll(",",":")
+				p3.innerHTML = "Time: " + finalTime;
 				a.classList.add("btn");
 				a.classList.add("btn-primary");
 				a.innerHTML = "More Info";
 				a.classList.add("buttonStyle");
 
 				btndiv.classList.add("btncontainer");
-				cardBody.setAttribute("id", "newFavourite");
+				card.setAttribute("id", "newFavourite");
 				i.setAttribute("onclick", "saveItem()")
 				i.classList.add("fa-regular");
 				i.classList.add("fa-heart");
@@ -111,6 +117,7 @@ function getData() {
 
 				a.href = "./Pages/moreInfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
 				
+				card.classList.add("cardStyle")
 				weatherContainer.classList.add("cardStyle")
 				
 				append(cardBody, h2);
@@ -164,7 +171,7 @@ function updateFavouriteList() {
 
 		storedList.forEach(function (item, index) {
 			div2 = createNode('div');
-			div2.setAttribute('class', 'mb-2 col-md-12');
+			//div2.setAttribute('class', 'mb-2 col-md-12');
 			div2.innerHTML = "<div id='item-" + index + ")'" + item + "</div>";
 			append(favouritesContainer, div2);
 		});
