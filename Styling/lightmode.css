@@ -73,6 +73,7 @@ h1 {
 .cardStyle {
     background-color: var(--accentlight);
     color:(--navbar) ;
+    border-style: none;
     border-radius: 40px;
     margin-top: 15px;
 }
