@@ -75,11 +75,10 @@ label {
     margin-top: 15px;
 }
 
-.cardtitle {
+.card-title {
     color:var(--bodytext);
     font-size:20px;
 }
-
 
 /* moving element on homepage down and adding shadows */ 
 #homepagebox {
