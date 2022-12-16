@@ -61,6 +61,18 @@
   <!--Background image-->
   <div class="container-fluid pt-5 pb-5" id="bgImage">
 
+    <!--centered title-->
+    <h1>Compute Commute</h1>
+    <p>Find bikes near you</p>
+<style>
+h1 {
+text-align: center;
+}
+p {
+text-align: center;
+}
+</style>
+
     <!--Inputboxes container-->
     <div class="container p-5 mx-auto" id="homepagebox">
 
@@ -68,13 +80,17 @@
         <p class="homepagetext">Please enter your chosen city and date you wish to travel on</p>
       </div>
 
-      <div class="row mx-auto">
+      <div class="row mx-auto">      
+    
         <label for="location" class="form-label">Location:</label>
         <div class="input-group mb-3" id="inputbox">
           <span class="input-group-text" id="basic-addon3"></span>
+
           <input type="text" class="form-control" placeholder="Location" id="location" aria-describedby="basic-addon3">
+
         </div>
       </div>
+
 
       <div class="row mx-auto">
         <label for="dateTime" class="form-label">Date/Time:</label>
