@@ -20,7 +20,6 @@ function append(parent, el) {
 // on condition, call associated method
 document.getElementById("clear").addEventListener("click", function () { clearfavourites() });
 document.getElementById("submit").addEventListener("click", function () { additem() });
-
 document.getElementById("submit").addEventListener("onkeydown", function () { additem() });
 
 
@@ -176,7 +175,7 @@ function updateFavouriteList() {
 // display 'no favourites' message when called
 function printNoFavourites() {
 	nofavourites = "<div class='mb-2 col-md-12'><p class='mb-2 mt-2 text-center p-2'><i class='fa-solid fa-star'></i></i> No Saved Favourites</p></div>";
-	document.getElementById('containerbox').innerHTML = nofavourites;
+	document.getElementById('favouriteItems').innerHTML = nofavourites;
 }
 
 
