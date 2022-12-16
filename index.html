@@ -12,6 +12,7 @@
   <link href="Styling/lightmode.css" rel="stylesheet" id="link">
   <link rel="icon" href="Styling/Browser icon.png" sizes="32x32" type="image/png">
   <script src="https://kit.fontawesome.com/4842b9bef1.js" crossorigin="anonymous"></script>
+
   <script>
     // This is for making a PWA
     if ('serviceWorker' in navigator) {
@@ -105,7 +106,14 @@
 
   <!--Cards-->
   <!--Containers and images can be added with javascript upon user submitting input. As well as this more info button linking to moreInfo.html page can be appended-->
-  <div class="container" id="containerbox"></div>
+
+  <div class="container">
+    <div class="row">
+      <h1>Favourites</h1>
+    </div>
+    <div class="row" id="favouriteItems"></div>
+  </div>
+
 
   <div class="container">
     <button type="button" class="btn btn-primary buttonStyle" id="clear">Clear favourites</button>

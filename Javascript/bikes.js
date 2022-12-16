@@ -12,13 +12,14 @@ currentLocation = window.location.href;
 var searchString = currentLocation.split("?");
 var city = searchString[1];
 
+//capitalise first letter of city so it works in bike api - used link below to help
 //https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
-//capitalise first letter of city so it works in bike api
 function capitaliseFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 //https://stackoverflow.com/questions/10679580/javascript-search-inside-a-json-object
+
 var bikeUrl = "https://api.citybik.es/v2/networks";
 const bikesContainer = document.getElementById("bikes");
 let searchedCity = capitaliseFirstLetter(city);
@@ -27,16 +28,20 @@ fetch(bikeUrl)
     .then(function (data) {
         var network = data.networks
 
+        //search for the searched city in the JSON - got help from link below
+        //https://stackoverflow.com/questions/10679580/javascript-search-inside-a-json-object
         currentCity = network.find(record => record.location.city === searchedCity);
         cityName = currentCity.location.city;
         id = currentCity.id;
 
+        // use new url to get city specific bike data
         newurl = "https://api.citybik.es/v2/networks/" + id;
         fetch(newurl)
             .then((resp) => resp.json())
             .then(function (data2) {
                 var bikes = data2.network.stations;
                 //only get first 9 bikes to make more readable
+                //https://stackoverflow.com/questions/34883068/how-to-get-first-n-number-of-elements-from-an-array
                 var slicedBikes = bikes.slice(0,9);
                 return slicedBikes.map(function (bike) {
                     var p3 = createNode("p");

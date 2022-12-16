@@ -7,6 +7,7 @@ onload, check if an array of favourites exisits,
 */
 window.onload = updateFavouriteList();
 
+
 // helper functions
 function createNode(element) {
 	return document.createElement(element);
@@ -22,10 +23,10 @@ document.getElementById("submit").addEventListener("click", function () { addite
 
 document.getElementById("submit").addEventListener("onkeydown", function () { additem() });
 
+
 // when called, removes all children of weather container and adds the new data
 // This prevents being able to stack instances of multiple cities
 function additem() {
-	console.log('removing children')
 
 	var div = document.getElementById('weather');
 	while (div.firstChild) {
@@ -35,15 +36,16 @@ function additem() {
 	getData();
 }
 
+
 /* when called, this savese theme preference to a variable, 
 clears loal storage and then reassigns theme preferences 
 in local storage back to the value in the variable. */
 function clearfavourites() {
-	console.log('clearing')
 	localStorage.clear();
 	window.localStorage.setItem('theme', theme);
 	updateFavouriteList();
 }
+
 
 /* This is the function that deals with getting values from weather API
 and displaying them in the weather container on the page. */
@@ -57,9 +59,8 @@ function getData() {
 		// convert to JSON
 		.then((resp) => resp.json())
 		.then(function (data) {
-			console.log(data);
 			var weather = data.days;
-			console.log(weather)
+
 			// displaying results
 			return weather.map(function (wether) {
 				var h2 = createNode("h2");
@@ -72,12 +73,17 @@ function getData() {
 				var i = createNode("i");
 				var column = createNode("div");
 				var cardBody = createNode("div");
+				var card = createNode("div");
 
 				cardBody.classList.add("card-body");
 				cardBody.classList.add("p-3")
 				cardBody.classList.add("px-5")
 				cardBody.classList.add("py-4")
+				card.classList.add("card");
+				card.classList.add("mt-3");
 				column.classList.add("col-md-4");
+				column.classList.add("d-flex");
+                column.classList.add("align-items-stretch")
 				h2.classList.add("card-title");
 				p.classList.add("card-text");
 				p1.classList.add("card-text");
@@ -93,6 +99,7 @@ function getData() {
 				a.classList.add("btn-primary");
 				a.innerHTML = "More Info";
 				a.classList.add("buttonStyle");
+
 				btndiv.classList.add("btncontainer");
 				cardBody.setAttribute("id", "newFavourite");
 				i.setAttribute("onclick", "saveItem()")
@@ -101,17 +108,17 @@ function getData() {
 				i.classList.add("align-middle");
 				i.setAttribute("id", "heart");
 
-				//This code does make something happen, but sets all cities to the same each time
-				cityName = localStorage.setItem("name", JSON.stringify(data.address))
 
 				a.href = "./Pages/moreInfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
-				console.log("This")
-				weatherContainer.classList.add("cardStyle");
+				
+				card.classList.add("cardStyle")
+				
 				append(cardBody, h2);
 				append(cardBody, p);
 				append(cardBody, p1);
 				append(cardBody, p2);
 				append(cardBody, p3);
+
 				append(btndiv, a)
 				append(btndiv, i)
 				append(cardBody, btndiv)
@@ -128,8 +135,7 @@ function getData() {
 function saveItem() {
 	var storedList = localStorage.getItem("favouriteItems")
 	storedList = JSON.parse(storedList)
-	console.log(storedList);
-	storedList.push(document.getElementById("newFavourite").value);
+	storedList.push(document.getElementById("newFavourite").innerHTML);
 	localStorage.setItem("favouriteItems", JSON.stringify(storedList));
 	updateFavouriteList();
 	document.getElementById("newFavourite").value = "";
@@ -151,27 +157,26 @@ function updateFavouriteList() {
 		printNoFavourites();
 
 	} else {
-		console.log("favouries exist")
 		storedList = JSON.parse(localStorage.getItem("favouriteItems")); //get localstorage and turn into array
-		favouritesContainer = document.createElement('div'); //go through array and write a new alert box for each
+
+		favouritesContainer = document.createElement('div'); //go through array and write a new div for each
 
 		storedList.forEach(function (item, index) {
 			div2 = createNode('div');
 			div2.setAttribute('class', 'mb-2 col-md-12');
-			div2.innerHTML = "<div><p>" + JSON.parse(localStorage.getItem("name")) + "</p></div>";
+			div2.innerHTML = "<div id='item-" + index + ")'><p>" + item + "</p></div>";
 			append(favouritesContainer, div2);
 		});
 
-		document.getElementById('containerbox').innerHTML = favouritesContainer.innerHTML;
-
+		document.getElementById('favouriteItems').innerHTML = favouritesContainer.innerHTML;
 	}
 }
+
 
 // display 'no favourites' message when called
 function printNoFavourites() {
 	nofavourites = "<div class='mb-2 col-md-12'><p class='mb-2 mt-2 text-center p-2'><i class='fa-solid fa-star'></i></i> No Saved Favourites</p></div>";
 	document.getElementById('containerbox').innerHTML = nofavourites;
 }
-
 
 
