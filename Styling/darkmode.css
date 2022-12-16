@@ -18,6 +18,10 @@ h1 {
     color: var(--bodytext);
 }
 
+.carouselText {
+    color: (var(--bodytext));
+}
+
 #inputbox {
     opacity: 30%;
 }

@@ -34,6 +34,10 @@ label {
 h1 {
     color: var(--accent);
 }
+
+.carouselText {
+    color: (var(--secondpink));
+}
 /* add styling to buttons */
 .buttonStyle {
     background-color: var(--mainpink);
