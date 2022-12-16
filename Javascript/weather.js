@@ -32,6 +32,7 @@ function additem() {
 		div.removeChild(div.firstChild);
 		console.log('removed +' + div.firstChild)
 	}
+	console.log("submitting")
 	getData();
 }
 
@@ -110,14 +111,13 @@ function getData() {
 
 				a.href = "./Pages/moreInfo.html?" + data.address + "?" + wether.datetime + "?" + data.currentConditions.datetime;
 				
-				card.classList.add("cardStyle")
+				weatherContainer.classList.add("cardStyle")
 				
 				append(cardBody, h2);
 				append(cardBody, p);
 				append(cardBody, p1);
 				append(cardBody, p2);
 				append(cardBody, p3);
-
 				append(btndiv, a)
 				append(btndiv, i)
 				append(cardBody, btndiv)
