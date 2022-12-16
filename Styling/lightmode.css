@@ -105,22 +105,54 @@ h1 {
     box-shadow: 5px 5px 10px 5px #005961;
 }
 
-.nav-item a {
-    font-size: 20pt;
-    border-radius: 25px;
-    margin-left: 15px;
-    padding: 10px;
-}
+@media (min-width: 600px) {
 
-.navbar-brand{
-    border-radius: 15px;
-    padding: 5px;
-}
-
-.navbar-brand img{
-    height: 50px;
-    width: 100%;
-}
+    .nav-item a {
+        font-size: 20pt;
+        border-radius: 25px;
+        margin-left: 15px;
+        padding: 10px;
+    }
+    
+    .navbar-brand{
+        border-radius: 15px;
+        padding: 5px;
+    }
+    
+    .navbar-brand img{
+        height: 50px;
+        width: 100%;
+    }
+    
+    }
+    
+    @media (max-width: 600px) {
+    
+        #themebtn {
+            font-size: 60%;
+            padding: 35px 10px;
+            line-height: 1;
+            border-radius: 30px;
+        }
+    
+        .nav-item a {
+            font-size: 18pt;
+            border-radius: 20px;
+            margin-left: 3px;
+            padding: 7px;
+        }
+    
+        .navbar-brand{
+            border-radius: 15px;
+            margin-right: 1px;
+            padding: 3px;
+        }
+    
+        .navbar-brand img{
+            height: 40px;
+            width: 100%;
+        }
+    }
 
 .mainimg{
     opacity: 90%;
@@ -201,54 +233,22 @@ padding-bottom: -15px;
     padding-bottom: 12pt;
 }
 
-  /* Favourites Buttons */
-  .heartbutton{
 
-    border: none;
-
-    color: white;
-
-    padding: 15px 32px;
-
-    text-align: center;
-
-    text-decoration: none;
-
-    display: inline-block;
-
-    font-size: 16px;
-
-    margin: 4px 2px;
-
-    cursor: pointer;
-
-  }
-
-  .heart_container{
-
-    background-color: hwb(0 100% 0%);
-
-    border-radius: 50px;
-
-    box-shadow: 0 5px 10px rgb(211, 211, 211);
-
-    display: inline-block;
-
-    width:34px;
-
-    height:34px;
-
-    text-align:center;
-
-    line-height:44px;
-
-}
+.infomaychange {
+    opacity: 25%;
+    font-size: 15px;
+    padding-bottom: -15px;
+   }
 
 #heart{
 
     font-size: 25px;
 
-    color: darkgray;
+    color: var(--mainpink);
+
+    margin-left: 20px;
+
+    margin-top: 7px;
 
 }
 
@@ -258,5 +258,23 @@ padding-bottom: -15px;
 
     cursor: pointer;
 
+
 }
 
+#heart:active{
+
+    color:red;
+}
+
+.faqHeading{
+    margin-bottom: 15px;
+}
+
+.faqText{
+    margin-bottom: 55px;
+}
+
+.tosHeading{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
