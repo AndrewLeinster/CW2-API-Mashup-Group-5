@@ -121,8 +121,10 @@ function getData() {
 				append(btndiv, a)
 				append(btndiv, i)
 				append(cardBody, btndiv)
-				append(column, cardBody);
+				append(card, cardBody)
+				append(column, card);
 				append(weatherContainer, column);
+				console.log(card)
 			})
 		})
 		.catch(function (error) {
@@ -163,7 +165,7 @@ function updateFavouriteList() {
 		storedList.forEach(function (item, index) {
 			div2 = createNode('div');
 			div2.setAttribute('class', 'mb-2 col-md-12');
-			div2.innerHTML = "<div id='item-" + index + ")'><p>" + item + "</p></div>";
+			div2.innerHTML = "<div id='item-" + index + ")'" + item + "</div>";
 			append(favouritesContainer, div2);
 		});
 
