@@ -1,9 +1,11 @@
+// on page load, checks expected value of theme, sets CSS link of index page to expected value
 window.onload = () => {
     var oldlink = document.getElementById("link");
-    console.log("checkCSS")
     theme = window.localStorage.getItem('theme')
     console.log(window.localStorage.getItem('theme'))
 
+    // This if statement checks where the file is being called from and changes the links accordingly.
+    // Until we did this we had two seperate files with just the links changed, so it is a large efficiency improvement
     if (window.location.href == "https://andrewleinster.github.io/CW2-API-Mashup-Group-5/" || window.location.href == "https://andrewleinster.github.io/CW2-API-Mashup-Group-5/index.html") {
         if (theme == 'dark') {
 
@@ -56,8 +58,10 @@ else{
 
 };
 
+// called changeCSS function when clicked. Could not be 'onclick' as this would change it twice (ie, back to original theme)
 document.getElementById("themebtn").addEventListener("mousedown", function () { changeCSS() })
 
+// When called, this function checks current theme, and sets CSS link of index page to opposite value
 function changeCSS() {
     theme = window.localStorage.getItem('theme')
     var oldlink = document.getElementById("link");
